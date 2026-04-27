@@ -11,16 +11,9 @@ export default define.page(function Home(ctx) {
   return (
     <div class="px-4 py-8 mx-auto fresh-gradient min-h-screen">
       <Head>
-        <title>Fresh counter</title>
+        <title>kuusi.dev</title>
       </Head>
       <div class="max-w-3xl mx-auto flex flex-col items-center justify-center">
-        <img
-          class="my-6"
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the Fresh logo: a sliced lemon dripping with juice"
-        />
         <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
         <p class="my-4">
           Try updating this message in the

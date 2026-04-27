@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
 .fresh-gradient {
   background-color: rgb(134, 239, 172);
   background-image: linear-gradient(
@@ -7,4 +9,14 @@
     rgb(187, 247, 208),
     rgb(254, 249, 195)
   );
+}
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --breakpoint-3xl: 120rem;
+  --color-bg: rgb(25, 25, 25);
+  --color-kuusi-blue: rgb(30,150,255);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  /* ... */
 }
