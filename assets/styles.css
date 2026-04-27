@@ -1,22 +1,26 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-.fresh-gradient {
-  background-color: rgb(134, 239, 172);
-  background-image: linear-gradient(
-    to right bottom,
-    rgb(219, 234, 254),
-    rgb(187, 247, 208),
-    rgb(254, 249, 195)
-  );
-}
-
 @theme {
   --font-display: "Satoshi", "sans-serif";
   --breakpoint-3xl: 120rem;
+  --border-white: rgb(200, 200, 200);
   --color-bg: rgb(25, 25, 25);
-  --color-kuusi-blue: rgb(30,150,255);
+  --color-bg-1: rgb(35, 35, 35);
+  --color-kuusi-blue: rgb(30, 150, 255);
+  --color-kuusi-blue-1: rgb(calc(30 * 1.2), calc(150 * 1.2), 255);
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   /* ... */
+}
+
+:root {
+  background-color: var(--color-bg-1);
+}
+
+.homeField {
+  background-color: var(--color-bg);
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
 }
