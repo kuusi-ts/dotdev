@@ -7,17 +7,14 @@ export default define.page(function App({ Component }) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/kuusi.svg" />
+        <link rel="icon" type="image/svg+xml" href="/kuusi-logo.svg" />
         <title>kuusi</title>
       </head>
       <body>
-        <div
-          class="max-lg:collapse shadow-sm w-full rounded-md"
-          style="background-color: var(--color-bg)"
-        >
+        <div class="bg-bg max-lg:collapse shadow-sm w-full rounded-md">
           <div class="collapse-title navbar">
             <div class="navbar-start">
-              <div class="px-2"></div>
+              <div class="px-3"></div>
               <label
                 htmlFor="navbar-1-toggle"
                 class="btn btn-ghost lg:hidden"
@@ -67,19 +64,11 @@ export default define.page(function App({ Component }) {
               </ul>
             </div>
             <div class="navbar-end">
-              {
-                /*<input
-                type="text"
-                placeholder="Search"
-                class="input input-bordered w-64 lg:w-auto"
-              />*/
-              }
             </div>
           </div>
-          {
-            /*
+
           <div class="collapse-content lg:hidden z-1">
-          <ul class="menu">
+            <ul class="menu">
               <li>
                 <button>Item 1</button>
               </li>
@@ -99,8 +88,6 @@ export default define.page(function App({ Component }) {
               </li>
             </ul>
           </div>
-            */
-          }
         </div>
         <Component />
       </body>
