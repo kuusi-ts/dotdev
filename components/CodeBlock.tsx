@@ -16,8 +16,6 @@ export function CodeBlock({ code, language }: CodeBlock) {
     index === 0 ? element : ("  " + element)
   ).join("\n");
 
-  highlightedCode = highlightedCode.slice(0, -3);
-
   return (
     <div class="bg-bg--1 p-10 rounded-[15px] mockup-code">
       <pre dangerouslySetInnerHTML={{ __html: highlightedCode }}>

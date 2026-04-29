@@ -1,7 +1,7 @@
-import { Head } from "fresh/runtime";
-import { define } from "../utils.ts";
 import { CodeBlock } from "@/components/CodeBlock.tsx";
 import { CodeInline } from "@/components/CodeInline.tsx";
+import { Head } from "fresh/runtime";
+import { define } from "../utils.ts";
 
 export default define.page(function Home() {
   const code = "deno run -Ar jsr:@kuusi/kuusi my-project" as const;
@@ -13,8 +13,8 @@ export default define.page(function Home() {
   const kuusiConfigTs = decoder.decode(
     Deno.readFileSync("./static/kuusi.config.txt"),
   );
-  const routesIndexSourceTs = decoder.decode(
-    Deno.readFileSync("./static/index.source.txt"),
+  const indexTs = decoder.decode(
+    Deno.readFileSync("./static/index.txt"),
   );
 
   return (
@@ -127,7 +127,7 @@ export default define.page(function Home() {
           </p>
 
           <h1 class="mb-3 text-xl font-bold">
-            <CodeInline>routes/index.source.ts</CodeInline>
+            <CodeInline>src/index.ts</CodeInline>
           </h1>
 
           <p class="my-3">
@@ -137,7 +137,7 @@ export default define.page(function Home() {
 
           <CodeBlock
             {...{
-              code: routesIndexSourceTs,
+              code: indexTs,
               language: "typescript",
             }}
           />

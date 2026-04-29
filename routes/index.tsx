@@ -1,7 +1,7 @@
 import { KuusiLogo } from "@/components/KuusiLogo.tsx";
 import { Head } from "fresh/runtime";
-import { define } from "../utils.ts";
 import { CodeBlock } from "../components/CodeBlock.tsx";
+import { define } from "../utils.ts";
 
 export default define.page(function Home() {
   return (

@@ -5,13 +5,13 @@ export default define.page(function App({ Component }) {
   const ExtraDocsOptions = () => (
     <>
       <li>
-        <a href="/docs/configuration">Configuration</a>
+        <a href="/docs#configuration">Configuration</a>
       </li>
       <li>
-        <a href="/docs/errors">Errors</a>
+        <a href="/docs#errors">Errors</a>
       </li>
       <li>
-        <a href="/docs/warnings">Warnings</a>
+        <a href="/docs#warnings">Warnings</a>
       </li>
     </>
   );
