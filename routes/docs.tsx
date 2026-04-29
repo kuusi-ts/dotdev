@@ -1,8 +1,9 @@
 import { CodeBlock } from "@/components/CodeBlock.tsx";
-import { type AllowedTags, docs, type Text } from "@/lib/documentation.ts";
+import { docs, type Text } from "@/lib/documentation.ts";
 // Todo: shorten this
 import { JSXInternal } from "@/node_modules/.deno/preact@10.29.1/node_modules/preact/src/jsx.d.ts";
 import { Head } from "fresh/runtime";
+import showdown from "showdown";
 import { capitalize } from "../lib/utils.ts";
 import { define } from "../utils.ts";
 
@@ -10,7 +11,21 @@ function rawToJSX(...text: Text[]): JSXInternal.Element[] {
   const elements = [];
 
   for (const textPart of text) {
-    const table: Record<AllowedTags, JSXInternal.Element> = {
+    if (textPart.type === "list") {
+      const converter = new showdown.Converter();
+      const html = converter.makeHtml(textPart.content)
+        .replaceAll("<ul>", '<ul class="list-disc">')
+        .replaceAll("<CodeInline>", "<CodeInline>")
+        .replaceAll("</CodeInline>", "</CodeInline>");
+
+      console.log(html);
+
+      elements.push(<span dangerouslySetInnerHTML={{ __html: html }} />);
+
+      continue;
+    }
+
+    const table = {
       h1: (
         <>
           <h1 class="text-4xl my-4 font-bold inline-block">

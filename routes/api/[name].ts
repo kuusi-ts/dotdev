@@ -1,5 +1,7 @@
 import { define } from "../../utils.ts";
 
+// Turn this into a github api fetcher for cool stats from github
+
 export const handler = define.handlers({
   GET(ctx) {
     const name = ctx.params.name;
