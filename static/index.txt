@@ -1,0 +1,11 @@
+// Import the kuusi router and the routes collector
+import { getKuusiRoutes, kuusi } from "@kuusi/kuusi";
+
+// Collect all the routes
+const routes = await getKuusiRoutes();
+
+// Set up a new server with Deno.serve and serve the port 1296
+Deno.serve({ port: 1296 }, async function (req) {
+  // Use the kuusi router
+  return await kuusi(req, routes);
+});

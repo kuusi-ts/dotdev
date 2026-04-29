@@ -1,4 +1,4 @@
-import { KuusiLogo } from "@/components/kuusiLogo.tsx";
+import { KuusiLogo } from "@/components/KuusiLogo.tsx";
 import { define } from "../utils.ts";
 
 export default define.page(function App({ Component }) {

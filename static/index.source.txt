@@ -1,0 +1,22 @@
+// Import the WebSource class to set up an endpoint
+import { WebSource } from "@kuusi/kuusi";
+
+const route = new WebSource({
+  // Now define the logic for the GET method.
+  GET: () =>
+    // Return a response.
+    new Response(
+      JSON.stringify({
+        message: "Tervetuloa Kuusella!",
+      }),
+      {
+        status: 200,
+        headers: {
+          "content-type": "application/json; charset=utf-8",
+        },
+      },
+    ),
+});
+
+// Export the route as default
+export default route;

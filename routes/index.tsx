@@ -1,6 +1,7 @@
-import { KuusiLogo } from "@/components/kuusiLogo.tsx";
+import { KuusiLogo } from "@/components/KuusiLogo.tsx";
 import { Head } from "fresh/runtime";
 import { define } from "../utils.ts";
+import { CodeBlock } from "../components/CodeBlock.tsx";
 
 export default define.page(function Home() {
   return (
@@ -33,14 +34,14 @@ export default define.page(function Home() {
 
         <div class="flex flex-row gap-10 h-auto">
           <div class="p-10 w-1/2 content-center">
-            <div class="bg-bg p-10 rounded-[15px] mockup-code">
-              <pre data-prefix="1">
-                <code>
-                  deno run -Ar jsr:@kuusi/init trillion-dollar-project
-                </code>
-              </pre>
-            </div>
+            <CodeBlock
+              {...{
+                code: "deno run -Ar jsr:@kuusi/init trillion-dollar-project",
+                language: "typescript",
+              }}
+            />
           </div>
+
           <div class="w-1/2 flex items-center justify-center">
             <div class="bg-bg p-10 rounded-[15px] border border-(--border-white)">
               <h1 class="text-4xl font-bold mb-2">

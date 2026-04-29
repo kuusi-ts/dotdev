@@ -1,11 +1,22 @@
 import { Head } from "fresh/runtime";
-import hljs from "highlight.js/lib/core";
-import typescript from "highlight.js/lib/languages/javascript";
 import { define } from "../utils.ts";
-
-hljs.registerLanguage("typescript", typescript);
+import { CodeBlock } from "@/components/CodeBlock.tsx";
+import { CodeInline } from "@/components/CodeInline.tsx";
 
 export default define.page(function Home() {
+  const code = "deno run -Ar jsr:@kuusi/kuusi my-project" as const;
+  const decoder = new TextDecoder();
+
+  const indexSourceTs = decoder.decode(
+    Deno.readFileSync("./static/index.source.txt"),
+  );
+  const kuusiConfigTs = decoder.decode(
+    Deno.readFileSync("./static/kuusi.config.txt"),
+  );
+  const routesIndexSourceTs = decoder.decode(
+    Deno.readFileSync("./static/index.source.txt"),
+  );
+
   return (
     <div class="px-4 py-8 mx-auto min-h-screen">
       <Head>
@@ -28,29 +39,113 @@ export default define.page(function Home() {
           </h1>
 
           <p class="my-3">
-            Getting started with kuusi is really easy. Firstly, run the init
-            command to create the basic structure of your project.
+            Getting started with kuusi is really easy. Firstly, make sure you
+            have the Deno runtime installed. Node.js, Bun and other runtimes are
+            {" "}
+            <b>not</b>{" "}
+            supported. Secondly, run the init command to create the basic
+            structure of your project.
           </p>
 
-          <div class="bg-bg-1 p-10 rounded-[15px] mockup-code">
-            <pre data-prefix="1">
-              <code >
-                deno run -Ar jsr:@kuusi/init trillion-dollar-project
-              </code>
-            </pre>
-          </div>
+          <CodeBlock {...{ code, language: "typescript" }} />
 
           <p class="my-3">
             Here we are creating a new project called{" "}
-            <code class="bg-bg--1 rounded-[2px] border-">
-              trillion-dollar-project
-            </code>.
+            <CodeInline>
+              my-project
+            </CodeInline>.
+          </p>
 
-            <pre>
-              <code class="language-typescript">
-                console.log("Hallo daar");
-              </code>
-            </pre>
+          <h1 class="mb-3 text-2xl font-bold">
+            Understanding kuusi
+          </h1>
+
+          <p class="my-3">
+            After you run the init command, your project looks something like
+            this:
+          </p>
+
+          <CodeBlock
+            {...{
+              code:
+                "my-project/\n├── deno.json\n├── deno.lock\n├── kuusi.config.ts\n├── routes\n│   └── index.source.ts\n└── src\n    └── index.ts\n\n3 directories, 5 files",
+              language: "typescript",
+            }}
+          />
+
+          <p class="my-3">
+            There are three important files to understand,{" "}
+            <CodeInline>src/index.ts</CodeInline>,{" "}
+            <CodeInline>routes/index.source.ts</CodeInline> and{" "}
+            <CodeInline>kuusi.config.ts</CodeInline>.
+          </p>
+
+          <h1 class="mb-3 text-xl font-bold">
+            <CodeInline>routes/index.source.ts</CodeInline>
+          </h1>
+
+          <p class="my-3">
+            This file, like all files in the routes are automatically imported
+            and set up as route.
+          </p>
+
+          <CodeBlock
+            {...{
+              code: indexSourceTs,
+              language: "typescript",
+            }}
+          />
+
+          <p class="my-4">
+            This is a very basic route that returns a string as a response. This
+            function does not use any of the parameters kuusi supplies
+            (<CodeInline>req: Request</CodeInline> and{" "}
+            <CodeInline>urlPatternResult: URLPatternResult</CodeInline>), but
+            those can be used if you wish to.
+          </p>
+
+          <h1 class="mb-3 text-xl font-bold">
+            <CodeInline>kuusi.config.ts</CodeInline>
+          </h1>
+
+          <p class="my-3">
+            This file is your projects entrypoint. Running this file starts
+            kuusi.
+          </p>
+
+          <CodeBlock
+            {...{
+              code: kuusiConfigTs,
+              language: "typescript",
+            }}
+          />
+
+          <p class="my-4">
+            This file is used to configure kuusi however you wish. For more
+            information on configuration, see{" "}
+            <a href="/docs/configuration">the configuration docs</a>.
+          </p>
+
+          <h1 class="mb-3 text-xl font-bold">
+            <CodeInline>routes/index.source.ts</CodeInline>
+          </h1>
+
+          <p class="my-3">
+            This file is your projects entrypoint. Running this file starts
+            kuusi.
+          </p>
+
+          <CodeBlock
+            {...{
+              code: routesIndexSourceTs,
+              language: "typescript",
+            }}
+          />
+
+          <p class="my-4">
+            This file is used to configure kuusi however you wish. For more
+            information on configuration, see{" "}
+            <a href="/docs/configuration">the configuration docs</a>.
           </p>
         </div>
       </div>
