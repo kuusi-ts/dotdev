@@ -1,0 +1,9 @@
+// Import the KuusiConfig class from the types module.
+import { KuusiConfig } from "@kuusi/kuusi/types";
+
+const config = new KuusiConfig({
+  // Configure kuusi here
+});
+
+// Export the config
+export default config;

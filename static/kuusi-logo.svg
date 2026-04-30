@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800"><path
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800">
+  <path
     fill="#00000000"
     class="dcg-svg-background"
     d="M0 0h800v800H0z"
-  /><g transform="scale(2)" /><g transform="scale(2)"><title
-    >Expression 12</title><path
+  />
+  <g transform="scale(2)" />
+  <g transform="scale(2)">
+    <title>Expression 12</title>
+    <path
       fill="none"
       stroke="#00000000"
       class="dcg-svg-curve"
@@ -13,17 +17,23 @@
       stroke-linejoin="round"
       stroke-miterlimit="10"
       stroke-width="2.5"
-    /><path
+    />
+    <path
       fill="#00000000"
       class="dcg-svg-region"
       paint-order="stroke fill markers"
       d="M.924.053H399.95l.188.687-.086 399.313L.139 399.95V.14z"
-    /></g><g transform="scale(2)"><title>Expression 13</title><path
+    />
+  </g>
+  <g transform="scale(2)">
+    <title>Expression 13</title>
+    <path
       fill="#1e96ff"
       class="dcg-svg-region"
       paint-order="stroke fill markers"
       d="m333.472 200.053 33.333-57.735-33.333-57.735h-66.667l-33.333-57.735h-66.667l-33.333 57.735H66.805l-33.333 57.735 33.333 57.735-33.333 57.735 33.333 57.735h66.667l33.333 57.735h66.667l33.333-57.735h66.667l33.333-57.735zh-66.667l-33.333 57.735h-66.667l-33.333-57.735 33.333-57.735h66.667l33.333 57.735z"
-    /><path
+    />
+    <path
       fill="none"
       stroke="#1e96ff"
       class="dcg-svg-curve"
@@ -33,4 +43,8 @@
       stroke-linejoin="round"
       stroke-miterlimit="10"
       stroke-width="2.5"
-    /></g><g transform="scale(2)" /><g transform="scale(2)" /></svg>
+    />
+  </g>
+  <g transform="scale(2)" />
+  <g transform="scale(2)" />
+</svg>
