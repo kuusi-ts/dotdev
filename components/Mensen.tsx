@@ -22,13 +22,22 @@ const people = [
     quote:
       "Kuusi is a super cool router for deno that is owned by a super cool human.",
   },
+  {
+    name: "DarkDeception",
+    quote:
+      "When i've heard of the name \"Kuusi\" i was like 'that's a cute and fun name' then i understood what the project was about and yeah, that's definitely a pretty cool and useful framework right here, good job bro keep it up with the good work ❤️",
+  },
+  {
+    name: "HappiePlant",
+    quote: "The best 🇫🇮🇫🇮🇫🇮 FINLAND inspired backend framework",
+  },
 ];
 
 export function Mensen() {
   const selectedPeople = getRandomItems(people, 3);
 
   return (
-    <ul class="list bg-base-100 rounded-box shadow-md">
+    <ul class="list bg-bg rounded-box shadow-md">
       <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">
         These folks like it
       </li>

@@ -4,7 +4,6 @@ import { Head } from "fresh/runtime";
 import { define } from "../utils.ts";
 
 export default define.page(function Home() {
-  const code = "deno run -Ar jsr:@kuusi/kuusi my-project" as const;
   const decoder = new TextDecoder();
 
   const indexSourceTs = decoder.decode(
@@ -47,7 +46,9 @@ export default define.page(function Home() {
             structure of your project.
           </p>
 
-          <CodeBlock {...{ code, language: "typescript" }} />
+          <CodeBlock
+            {...{ code: "deno run -Ar jsr:@kuusi/kuusi my-project" }}
+          />
 
           <p class="my-3">
             Here we are creating a new project called{" "}
@@ -69,7 +70,6 @@ export default define.page(function Home() {
             {...{
               code:
                 "my-project/\n├── deno.json\n├── deno.lock\n├── kuusi.config.ts\n├── routes\n│   └── index.source.ts\n└── src\n    └── index.ts\n\n3 directories, 5 files",
-              language: "typescript",
             }}
           />
 
@@ -89,12 +89,7 @@ export default define.page(function Home() {
             and set up as route.
           </p>
 
-          <CodeBlock
-            {...{
-              code: indexSourceTs,
-              language: "typescript",
-            }}
-          />
+          <CodeBlock {...{ code: indexSourceTs }} />
 
           <p class="my-4">
             This is a very basic route that returns a string as a response. This
@@ -113,17 +108,17 @@ export default define.page(function Home() {
             kuusi.
           </p>
 
-          <CodeBlock
-            {...{
-              code: kuusiConfigTs,
-              language: "typescript",
-            }}
-          />
+          <CodeBlock {...{ code: kuusiConfigTs }} />
 
           <p class="my-4">
             This file is used to configure kuusi however you wish. For more
             information on configuration, see{" "}
-            <a href="/docs/configuration">the configuration docs</a>.
+            <a
+              href="https://github.com/kuusi-ts/kuusi/blob/main/docs/DOCUMENTATION.md#kuusi-invalid-kuusi-config"
+              target="_blank"
+            >
+              the configuration docs
+            </a>.
           </p>
 
           <h1 class="mb-3 text-xl font-bold">
@@ -135,17 +130,12 @@ export default define.page(function Home() {
             kuusi.
           </p>
 
-          <CodeBlock
-            {...{
-              code: indexTs,
-              language: "typescript",
-            }}
-          />
+          <CodeBlock {...{ code: indexTs }} />
 
           <p class="my-4">
-            This file is used to configure kuusi however you wish. For more
-            information on configuration, see{" "}
-            <a href="/docs/configuration">the configuration docs</a>.
+            This file is used to run the server. Since kuusi is only a router,
+            and not a wrapper for a server, you can implement it in your own
+            logic if you desire to do so.
           </p>
         </div>
       </div>

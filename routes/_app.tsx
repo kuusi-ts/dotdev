@@ -1,26 +1,65 @@
 import { KuusiLogo } from "@/components/KuusiLogo.tsx";
 import { define } from "../utils.ts";
 
+const products = ["kuusi", "init", "dotdev"] as const;
+
+const locations = [
+  {
+    name: "GitHub",
+    link: "https://github.com/kuusi-ts/kuusi",
+  },
+  {
+    name: "JSR",
+    link: "https://jsr.io/@kuusi/kuusi",
+  },
+] as const;
+
+const findUs = [
+  {
+    name: "GitHub",
+    link: "https://github.com/kuusi-ts",
+  },
+] as const;
+
+const siteLinks = [
+  {
+    name: "Home",
+    link: "/",
+    extern: false,
+  },
+  {
+    name: "Guide",
+    link: "/guide",
+    extern: false,
+  },
+  {
+    name: "GitHub",
+    link: "https://github.com/kuusi-ts/kuusi",
+    extern: true,
+  },
+  {
+    name: "Docs",
+    link:
+      "https://github.com/kuusi-ts/kuusi/blob/main/docs/DOCUMENTATION.md#kuusi-invalid-kuusi-config",
+    extern: true,
+  },
+  {
+    name: "JSR",
+    link: "https://jsr.io/@kuusi/kuusi",
+    extern: true,
+  },
+] as const;
+
 export default define.page(function App({ Component }) {
   const Links = () => (
     <>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/guide">Guide</a>
-      </li>
-      <li>
-        <a href="https://github.com/kuusi-ts/kuusi" target="_blank">GitHub</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/kuusi-ts/kuusi/blob/main/docs/DOCUMENTATION.md#kuusi-invalid-kuusi-config"
-          target="_blank"
-        >
-          Docs
-        </a>
-      </li>
+      {siteLinks.map(({ name, link, extern }) => (
+        <li>
+          <a href={link} target={extern ? "_blank" : "_self"}>
+            {name}
+          </a>
+        </li>
+      ))}
     </>
   );
 
@@ -81,6 +120,50 @@ export default define.page(function App({ Component }) {
         </div>
 
         <Component />
+
+        <footer class="footer sm:footer-horizontal bg-bg text-base-content p-10">
+          <aside>
+            <KuusiLogo {...{ x: 40, y: 40 }} />
+            <p>
+              kuusi framework
+              <br />
+              Providing hexagons since 2026
+            </p>
+          </aside>
+          <nav>
+            <h6 class="footer-title">kuusi</h6>
+            {locations.map(({ name, link }) => (
+              <a
+                class="link link-hover"
+                href={link}
+              >
+                {name}
+              </a>
+            ))}
+          </nav>
+          <nav>
+            <h6 class="footer-title">Products</h6>
+            {products.map((repo) => (
+              <a
+                class="link link-hover"
+                href={`https://github.com/kuusi-ts/${repo}`}
+              >
+                {repo}
+              </a>
+            ))}
+          </nav>
+          <nav>
+            <h6 class="footer-title">Products</h6>
+            {findUs.map(({ name, link }) => (
+              <a
+                class="link link-hover"
+                href={link}
+              >
+                {name}
+              </a>
+            ))}
+          </nav>
+        </footer>
       </body>
     </html>
   );

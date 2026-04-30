@@ -18,6 +18,7 @@ export default define.page(function Home() {
               <h1 class="mb-2 text-4xl font-bold">
                 kuusi
               </h1>
+
               <p class="text-2xl font-bold my-2">
                 simple, configurable, six
               </p>
@@ -40,7 +41,6 @@ export default define.page(function Home() {
             <CodeBlock
               {...{
                 code: "deno run -Ar jsr:@kuusi/init trillion-dollar-project",
-                language: "typescript",
               }}
             />
           </div>

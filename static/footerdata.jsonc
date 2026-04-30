@@ -1,0 +1,47 @@
+{
+  // Currently unused because of type / lsp reasons
+  "products": ["kuusi", "init", "dotdev"],
+  "locations": [
+    {
+      "name": "GitHub",
+      "link": "https://github.com/kuusi-ts/kuusi"
+    },
+    {
+      "name": "JSR",
+      "link": "https://jsr.io/@kuusi/kuusi"
+    }
+  ],
+  "findUs": [
+    {
+      "name": "GitHub",
+      "link": "https://github.com/kuusi-ts"
+    }
+  ],
+  "siteLinks": [
+    {
+      "name": "Home",
+      "link": "/",
+      "extern": false
+    },
+    {
+      "name": "Guide",
+      "link": "/guide",
+      "extern": false
+    },
+    {
+      "name": "GitHub",
+      "link": "https://github.com/kuusi-ts/kuusi",
+      "extern": true
+    },
+    {
+      "name": "Docs",
+      "link": "https://github.com/kuusi-ts/kuusi/blob/main/docs/DOCUMENTATION.md#kuusi-invalid-kuusi-config",
+      "extern": true
+    },
+    {
+      "name": "JSR",
+      "link": "https://jsr.io/@kuusi/kuusi",
+      "extern": true
+    }
+  ]
+}

@@ -1,9 +1,7 @@
 import { ComponentChildren } from "preact";
 
-export function CodeInline({ children }: { children: ComponentChildren }) {
-  return (
-    <code class="bg-bg--1 rounded-xs">
-      {children}
-    </code>
-  );
-}
+export const CodeInline = ({ children }: { children: ComponentChildren }) => (
+  <code class="bg-bg--1 rounded-xs">
+    {children}
+  </code>
+);

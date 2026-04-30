@@ -6,11 +6,10 @@ hljs.registerLanguage("typescript", typescript);
 
 interface CodeBlock {
   code: string;
-  language: string;
 }
 
-export function CodeBlock({ code, language }: CodeBlock) {
-  let highlightedCode = hljs.highlight(code, { language }).value;
+export function CodeBlock({ code }: CodeBlock) {
+  let highlightedCode = hljs.highlight(code, { language: "typescript" }).value;
 
   highlightedCode = highlightedCode.split("\n").map((element, index) =>
     index === 0 ? element : ("  " + element)
@@ -18,8 +17,7 @@ export function CodeBlock({ code, language }: CodeBlock) {
 
   return (
     <div class="bg-bg--1 p-10 rounded-[15px] mockup-code">
-      <pre dangerouslySetInnerHTML={{ __html: highlightedCode }}>
-      </pre>
+      <pre dangerouslySetInnerHTML={{ __html: highlightedCode }} />
     </div>
   );
 }

@@ -1,6 +1,11 @@
 import { useSignal } from "@preact/signals";
 import { useEffect } from "preact/hooks";
-import type { GitHubStats } from "../lib/utils.ts";
+
+interface GitHubStats {
+  stars: number;
+  forks: number;
+  contributors: number;
+}
 
 export default function GithubStats() {
   const stats = useSignal<GitHubStats | null>(null);

@@ -1,22 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800"><path
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800">
+  <path
     fill="#fff"
     class="dcg-svg-background"
     d="M0 0h800v800H0z"
-  /><g
+  />
+  <g
     fill="none"
     stroke="#000"
     paint-order="fill stroke markers"
     stroke-miterlimit="10"
     stroke-width="2"
-  ><path
+  >
+    <path
       class="dcg-svg-minor-gridline"
       d="M67 0v800M133 0v800M201 0v800M267 0v800M333 0v800M467 0v800M533 0v800M601 0v800M667 0v800M733 0v800M0 733h800M0 667h800M0 601h800M0 533h800M0 467h800M0 333h800M0 267h800M0 201h800M0 133h800M0 67h800"
       stroke-opacity=".2"
-    /><path
+    />
+    <path
       class="dcg-svg-major-gridline"
       d="M133 0v800M667 0v800M0 667h800M0 133h800"
       stroke-opacity=".25"
-    /></g><g transform="scale(2)"><title>Y axis</title><path
+    />
+  </g>
+  <g transform="scale(2)">
+    <title>Y axis</title>
+    <path
       fill="none"
       stroke="#000"
       class="dcg-svg-axis-line"
@@ -25,7 +33,11 @@
       stroke-opacity=".9"
       stroke-miterlimit="10"
       stroke-width="1.5"
-    /></g><g transform="scale(2)"><title>X axis</title><path
+    />
+  </g>
+  <g transform="scale(2)">
+    <title>X axis</title>
+    <path
       fill="none"
       stroke="#000"
       class="dcg-svg-axis-line"
@@ -34,9 +46,13 @@
       stroke-opacity=".9"
       stroke-miterlimit="10"
       stroke-width="1.5"
-    /></g><g font-family="Arial" font-size="14" text-anchor="middle"><g
+    />
+  </g>
+  <g font-family="Arial" font-size="14" text-anchor="middle">
+    <g
       class="dcg-svg-axis-value"
-    ><text
+    >
+      <text
         fill="none"
         stroke="#fff"
         text-decoration="normal"
@@ -45,12 +61,16 @@
         stroke-miterlimit="2"
         stroke-width="3"
         transform="scale(2)"
-      >0</text><text
+      >0</text>
+      <text
         text-decoration="normal"
         x="191.107"
         y="215.808"
         transform="scale(2)"
-      >0</text></g><g class="dcg-svg-axis-value"><text
+      >0</text>
+    </g>
+    <g class="dcg-svg-axis-value">
+      <text
         fill="none"
         stroke="#fff"
         text-decoration="normal"
@@ -59,12 +79,16 @@
         stroke-miterlimit="2"
         stroke-width="3"
         transform="scale(2)"
-      >-2</text><text
+      >-2</text>
+      <text
         text-decoration="normal"
         x="64.336"
         y="215.808"
         transform="scale(2)"
-      >-2</text></g><g class="dcg-svg-axis-value"><text
+      >-2</text>
+    </g>
+    <g class="dcg-svg-axis-value">
+      <text
         fill="none"
         stroke="#fff"
         text-decoration="normal"
@@ -73,12 +97,16 @@
         stroke-miterlimit="2"
         stroke-width="3"
         transform="scale(2)"
-      >2</text><text
+      >2</text>
+      <text
         text-decoration="normal"
         x="333.333"
         y="215.808"
         transform="scale(2)"
-      >2</text></g><g class="dcg-svg-axis-value"><text
+      >2</text>
+    </g>
+    <g class="dcg-svg-axis-value">
+      <text
         fill="none"
         stroke="#fff"
         text-decoration="normal"
@@ -87,12 +115,16 @@
         stroke-miterlimit="2"
         stroke-width="3"
         transform="scale(2)"
-      >-2</text><text
+      >-2</text>
+      <text
         text-decoration="normal"
         x="188.776"
         y="337.141"
         transform="scale(2)"
-      >-2</text></g><g class="dcg-svg-axis-value"><text
+      >-2</text>
+    </g>
+    <g class="dcg-svg-axis-value">
+      <text
         fill="none"
         stroke="#fff"
         text-decoration="normal"
@@ -101,12 +133,18 @@
         stroke-miterlimit="2"
         stroke-width="3"
         transform="scale(2)"
-      >2</text><text
+      >2</text>
+      <text
         text-decoration="normal"
         x="191.107"
         y="70.475"
         transform="scale(2)"
-      >2</text></g></g><g transform="scale(2)"><title>Expression 12</title><path
+      >2</text>
+    </g>
+  </g>
+  <g transform="scale(2)">
+    <title>Expression 12</title>
+    <path
       fill="none"
       stroke="#191919"
       class="dcg-svg-curve"
@@ -116,17 +154,23 @@
       stroke-linejoin="round"
       stroke-miterlimit="10"
       stroke-width="2.5"
-    /><path
+    />
+    <path
       fill="#191919"
       class="dcg-svg-region"
       paint-order="stroke fill markers"
       d="M20.313 0H400v400H0V0z"
-    /></g><g transform="scale(2)"><title>Expression 13</title><path
+    />
+  </g>
+  <g transform="scale(2)">
+    <title>Expression 13</title>
+    <path
       fill="#1e96ff"
       class="dcg-svg-region"
       paint-order="stroke fill markers"
       d="m333.333 200 33.334-57.735-33.334-57.735h-66.666l-33.334-57.735h-66.666L133.333 84.53H66.667l-33.334 57.735L66.667 200l-33.334 57.735 33.334 57.735h66.666l33.334 57.735h66.666l33.334-57.735h66.666l33.334-57.735zh-66.666l-33.334 57.735h-66.666L133.333 200l33.334-57.735h66.666L266.667 200z"
-    /><path
+    />
+    <path
       fill="none"
       stroke="#1e96ff"
       class="dcg-svg-curve"
@@ -136,4 +180,8 @@
       stroke-linejoin="round"
       stroke-miterlimit="10"
       stroke-width="2.5"
-    /></g><g transform="scale(2)" /><g transform="scale(2)" /></svg>
+    />
+  </g>
+  <g transform="scale(2)" />
+  <g transform="scale(2)" />
+</svg>
