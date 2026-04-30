@@ -13,6 +13,14 @@ export default define.page(function App({ Component }) {
       <li>
         <a href="https://github.com/kuusi-ts/kuusi" target="_blank">GitHub</a>
       </li>
+      <li>
+        <a
+          href="https://github.com/kuusi-ts/kuusi/blob/main/docs/DOCUMENTATION.md#kuusi-invalid-kuusi-config"
+          target="_blank"
+        >
+          Docs
+        </a>
+      </li>
     </>
   );
 

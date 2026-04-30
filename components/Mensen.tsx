@@ -17,6 +17,11 @@ const people = [
     quote:
       "This framework changed my life. I was in a dark place until I discovered this and it gave me the energy to continue with my life. It is so meticulously crafted with great care, and I have never seen anything like it. I give my eternal thanks to this clearly GENIUS 17 year old who decided to put his thoughts into writing to change our lives and the world for the better.",
   },
+  {
+    name: "CJ",
+    quote:
+      "Kuusi is a super cool router for deno that is owned by a super cool human.",
+  },
 ];
 
 export function Mensen() {

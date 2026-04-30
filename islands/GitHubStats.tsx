@@ -19,7 +19,8 @@ export default function GithubStats() {
   return (
     <p>
       {stats.value.stars} stars · {stats.value.forks} forks ·{" "}
-      {stats.value.contributors} contributors
+      {stats.value.contributors}{" "}
+      {"contributors" + (stats.value.contributors !== 1 ? "s" : "")}
     </p>
   );
 }
