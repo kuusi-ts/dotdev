@@ -2,16 +2,16 @@ import { KuusiLogo } from "@/components/KuusiLogo.tsx";
 import { define } from "../utils.ts";
 
 export default define.page(function App({ Component }) {
-  const ExtraDocsOptions = () => (
+  const Links = () => (
     <>
       <li>
-        <a href="/docs#configuration">Configuration</a>
+        <a href="/">Home</a>
       </li>
       <li>
-        <a href="/docs#errors">Errors</a>
+        <a href="/guide">Guide</a>
       </li>
       <li>
-        <a href="/docs#warnings">Warnings</a>
+        <a href="https://github.com/kuusi-ts/kuusi" target="_blank">GitHub</a>
       </li>
     </>
   );
@@ -21,11 +21,10 @@ export default define.page(function App({ Component }) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/kuusi-logo.svg" />
+        <link rel="icon" type="image/svg+xml" href="/static/kuusi-logo.svg" />
         <title>kuusi</title>
       </head>
       <body>
-        {/*If something breaks, maybe add "lg:mb-48" to the class*/}
         <div class="bg-bg max-lg:collapse shadow-sm w-full rounded-md">
           <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
           <label
@@ -60,23 +59,7 @@ export default define.page(function App({ Component }) {
 
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <details>
-                    <summary>Docs</summary>
-                    <ul class="p-2 bg-base-100 w-40 z-1">
-                      <li>
-                        <a href="/docs">All</a>
-                      </li>
-                      <ExtraDocsOptions />
-                    </ul>
-                  </details>
-                </li>
-                <li>
-                  <a href="/guide">Guide</a>
-                </li>
+                <Links />
               </ul>
             </div>
             <div class="navbar-end" />
@@ -84,18 +67,7 @@ export default define.page(function App({ Component }) {
 
           <div class="collapse-content lg:hidden z-1">
             <ul class="menu">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/docs">Docs</a>
-                <ul>
-                  <ExtraDocsOptions />
-                </ul>
-              </li>
-              <li>
-                <a href="/guide">Guide</a>
-              </li>
+              <Links />
             </ul>
           </div>
         </div>

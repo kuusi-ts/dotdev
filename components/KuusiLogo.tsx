@@ -1,17 +1,15 @@
-import Logo from "@/assets/kuusi-logo.svg";
+import Logo from "/kuusi-logo.svg";
 
 interface Size {
   x: number;
   y: number;
 }
 
-export function KuusiLogo({ x, y }: Size) {
-  return (
-    <img
-      width={x}
-      height={y}
-      src={Logo}
-      alt="React Logo"
-    />
-  );
-}
+export const KuusiLogo = ({ x, y }: Size) => (
+  <img
+    width={x}
+    height={y}
+    src={Logo}
+    alt="Kuusi Logo"
+  />
+);
