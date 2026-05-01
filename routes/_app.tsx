@@ -72,7 +72,7 @@ export default define.page(function App({ Component }) {
         <title>kuusi</title>
       </head>
       <body class="text-white">
-        <div class="bg-bg max-lg:collapse shadow-sm w-full rounded-md">
+        <div class="bg-bg  max-lg:collapse shadow-sm w-full rounded-md">
           <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
           <label
             for="navbar-1-toggle"
@@ -121,7 +121,7 @@ export default define.page(function App({ Component }) {
 
         <Component />
 
-        <footer class="footer sm:footer-horizontal bg-bg text-base-content p-10">
+        <footer class="footer sm:footer-horizontal bg-bg text-white p-10">
           <aside>
             <KuusiLogo {...{ x: 40, y: 40 }} />
             <p>
@@ -153,7 +153,7 @@ export default define.page(function App({ Component }) {
             ))}
           </nav>
           <nav>
-            <h6 class="footer-title">Products</h6>
+            <h6 class="footer-title">Organisation</h6>
             {findUs.map(({ name, link }) => (
               <a
                 class="link link-hover"

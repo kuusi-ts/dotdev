@@ -1,5 +1,5 @@
 import { KuusiLogo } from "@/components/KuusiLogo.tsx";
-import { Mensen } from "@/components/Mensen.tsx";
+import { Mensen } from "@/islands/Mensen.tsx";
 import { Head } from "fresh/runtime";
 import { CodeBlock } from "../components/CodeBlock.tsx";
 import GithubStats from "../islands/GitHubStats.tsx";
@@ -14,17 +14,17 @@ export default define.page(function Home() {
       <div class="flex flex-col gap-10">
         <div class="flex flex-col md:flex-row gap-10">
           <div class="w-full md:w-1/2 flex items-center justify-center">
-            <div class="bg-bg p-10 h-auto rounded-[15px] border border-(--border-white) hover:border-(--color-kuusi-blue)">
-              <h1 class="mb-2 text-4xl font-bold">
+            <div class="bg-bg p-10 h-auto rounded-[15px] border border-(--border-white) hover:border-kuusi-blue">
+              <h1 class="text-4xl font-bold my-1">
                 kuusi
               </h1>
 
-              <p class="text-2xl font-bold my-2">
+              <p class="text-2xl font-bold my-1">
                 simple, configurable, six
               </p>
 
-              <p class="my-2">
-                Everything anyone will ever need
+              <p class="my-1">
+                Your next TypeScript-friendly backend framework for Deno
               </p>
             </div>
           </div>
@@ -46,12 +46,17 @@ export default define.page(function Home() {
           </div>
 
           <div class="w-full md:w-1/2 flex items-center justify-center">
-            <div class="bg-bg p-10 rounded-[15px] border border-(--border-white) hover:border-(--color-kuusi-blue)">
-              <h1 class="text-4xl font-bold mb-2">
+            <div class="bg-bg p-10 rounded-[15px] border border-(--border-white) hover:border-kuusi-blue">
+              <h1 class="text-4xl font-bold my-1">
                 Setup
               </h1>
-              <p class="my-2">
+
+              <h4 class="text-xl font-bold my-1">
                 Setting up is as easy as yksi, kaksi, kolme.
+              </h4>
+
+              <p class="my-1">
+                Building an API has never been so simple.
               </p>
             </div>
           </div>
@@ -59,7 +64,7 @@ export default define.page(function Home() {
 
         <div class="flex flex-col md:flex-row gap-10">
           <div class="w-full md:w-1/2 flex items-center justify-center">
-            <div class="bg-bg p-10 h-auto rounded-[15px] border border-(--border-white) hover:border-(--color-kuusi-blue)">
+            <div class="bg-bg p-10 h-auto rounded-[15px] border border-(--border-white) hover:border-kuusi-blue">
               <h1 class="mb-2 text-4xl font-bold">
                 Loved by the community
               </h1>

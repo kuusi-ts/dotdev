@@ -1,9 +1,17 @@
+import { useSignal } from "@preact/signals";
+
 function getRandomItems<T>(arr: T[], n: number) {
   const shuffled = arr.sort(() => 0.5 - Math.random());
   return shuffled.slice(0, n);
 }
 
-const people = [
+interface Quote {
+  name: string;
+  quote: string;
+  url?: string;
+}
+
+const people: Quote[] = [
   {
     name: "Rosalie",
     quote: "[This is worth] at least 11 [cents].",
@@ -32,22 +40,29 @@ const people = [
     quote: "The best 🇫🇮🇫🇮🇫🇮 FINLAND inspired backend framework",
   },
   {
-    name: "My girlfriend",
-    quote: "The \"easy as yksi kaksi kolme\" statement made me think about sauna.",
-    url: "https://avatars.githubusercontent.com/u/154922150?v=4"
+    name: "Elziy",
+    quote:
+      'The "easy as yksi kaksi kolme" statement made me think about sauna.',
+    url: "https://avatars.githubusercontent.com/u/154922150?v=4",
   },
 ];
 
 export function Mensen() {
-  const selectedPeople = getRandomItems(people, 3);
+  const selectedPeople = useSignal(getRandomItems(people, 3));
 
   return (
     <ul class="list bg-bg rounded-box shadow-md">
       <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">
-        These folks like it (refresh for new quotes):
+        These folks like it{" "}
+        <button
+          type="button"
+          onClick={() => selectedPeople.value = getRandomItems(people, 3)}
+        >
+          <b>refresh</b>
+        </button>
       </li>
 
-      {selectedPeople.map(({ name, quote, url }) => (
+      {selectedPeople.value.map(({ name, quote, url }) => (
         <li class="list-row">
           <div>
             <img
@@ -60,6 +75,7 @@ export function Mensen() {
             <div>
               {quote}
             </div>
+            
             <div class="text-xs uppercase font-semibold opacity-60">
               {name}
             </div>
