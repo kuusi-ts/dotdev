@@ -1,0 +1,7 @@
+import { getKuusiRoutes, kuusi, dotenv } from "@kuusi/kuusi";
+
+const routes = await getKuusiRoutes();
+
+Deno.serve({ port: dotenv.PORT }, async function (req) {
+  return await kuusi(req, routes);
+});

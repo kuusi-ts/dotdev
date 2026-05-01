@@ -6,6 +6,15 @@ import GithubStats from "../islands/GitHubStats.tsx";
 import { define } from "../utils.ts";
 
 export default define.page(function Home() {
+  const decoder = new TextDecoder();
+
+  const exampleCode = decoder.decode(
+    Deno.readFileSync("./static/exampleCode.txt"),
+  );
+  const exampleConfig = decoder.decode(
+    Deno.readFileSync("./static/configExample.txt"),
+  );
+
   return (
     <div class="px-4 py-8 mx-auto min-h-screen">
       <Head>
@@ -20,7 +29,7 @@ export default define.page(function Home() {
               </h1>
 
               <p class="text-2xl font-bold my-1">
-                simple, configurable, six
+                Simple, configurable, six
               </p>
 
               <p class="my-1">
@@ -36,15 +45,7 @@ export default define.page(function Home() {
           </div>
         </div>
 
-        <div class="flex flex-col-reverse md:flex-row gap-10 h-auto">
-          <div class="p-10 w-full md:w-1/2 content-center">
-            <CodeBlock
-              {...{
-                code: "deno run -Ar jsr:@kuusi/init trillion-dollar-project",
-              }}
-            />
-          </div>
-
+        <div class="flex flex-col md:flex-row-reverse gap-10 h-auto">
           <div class="w-full md:w-1/2 flex items-center justify-center">
             <div class="bg-bg p-10 rounded-[15px] border border-(--border-white) hover:border-kuusi-blue">
               <h1 class="text-4xl font-bold my-1">
@@ -59,6 +60,62 @@ export default define.page(function Home() {
                 Building an API has never been so simple.
               </p>
             </div>
+          </div>
+
+          <div class="p-10 w-full md:w-1/2 content-center">
+            <CodeBlock
+              {...{
+                code: "deno run -Ar jsr:@kuusi/init trillion-dollar-project",
+              }}
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-10 h-auto">
+          <div class="w-full md:w-1/2 flex items-center justify-center">
+            <div class="bg-bg p-10 rounded-[15px] border border-(--border-white) hover:border-kuusi-blue">
+              <h1 class="text-4xl font-bold my-1">
+                Simple file-based routing
+              </h1>
+
+              <h4 class="text-xl font-bold my-1">
+                Easily extensible for maximum flexibility.
+              </h4>
+
+              <p class="my-1">
+                Regular, webhook and websocket endpoints are all supported.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-10 w-full md:w-1/2 content-center">
+            <CodeBlock
+              {...{ code: exampleCode }}
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse gap-10 h-auto">
+          <div class="w-full md:w-1/2 flex items-center justify-center">
+            <div class="bg-bg p-10 rounded-[15px] border border-(--border-white) hover:border-kuusi-blue">
+              <h1 class="text-4xl font-bold my-1">
+                Configure with ease
+              </h1>
+
+              <h4 class="text-xl font-bold my-1">
+                Configure however you desire.
+              </h4>
+
+              <p class="my-1">
+                Your app, your rules!
+              </p>
+            </div>
+          </div>
+
+          <div class="p-10 w-full md:w-1/2 content-center">
+            <CodeBlock
+              {...{ code: exampleConfig }}
+            />
           </div>
         </div>
 
