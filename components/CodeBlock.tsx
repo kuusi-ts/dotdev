@@ -1,8 +1,10 @@
 import hljs from "highlight.js/lib/core";
-import typescript from "highlight.js/lib/languages/javascript";
+import typescript from "highlight.js/lib/languages/typescript";
 import "highlight.js/styles/github-dark.css";
 
-hljs.registerLanguage("typescript", typescript);
+if (!hljs.getLanguage("typescript")) {
+  hljs.registerLanguage("typescript", typescript);
+}
 
 interface CodeBlock {
   code: string;
@@ -12,7 +14,7 @@ export function CodeBlock({ code }: CodeBlock) {
   let highlightedCode = hljs.highlight(code, { language: "typescript" }).value;
 
   highlightedCode = highlightedCode.split("\n").map((element, index) =>
-    index === 0 ? element : ("  " + element)
+    element + (index === 0 ? "" : "  ")
   ).join("\n");
 
   return (
