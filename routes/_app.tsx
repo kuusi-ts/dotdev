@@ -71,7 +71,7 @@ export default define.page(function App({ Component }) {
         <link rel="icon" type="image/svg+xml" href="/static/kuusi-logo.svg" />
         <title>kuusi</title>
       </head>
-      <body>
+      <body class="text-white">
         <div class="bg-bg max-lg:collapse shadow-sm w-full rounded-md">
           <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
           <label

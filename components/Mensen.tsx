@@ -31,6 +31,11 @@ const people = [
     name: "HappiePlant",
     quote: "The best 🇫🇮🇫🇮🇫🇮 FINLAND inspired backend framework",
   },
+  {
+    name: "My girlfriend",
+    quote: "The \"easy as yksi kaksi kolme\" statement made me think about sauna.",
+    url: "https://avatars.githubusercontent.com/u/154922150?v=4"
+  },
 ];
 
 export function Mensen() {
@@ -39,15 +44,15 @@ export function Mensen() {
   return (
     <ul class="list bg-bg rounded-box shadow-md">
       <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">
-        These folks like it
+        These folks like it (refresh for new quotes):
       </li>
 
-      {selectedPeople.map(({ name, quote }) => (
+      {selectedPeople.map(({ name, quote, url }) => (
         <li class="list-row">
           <div>
             <img
               class="size-10 rounded-box"
-              src={`/mensen/${name}.png`}
+              src={url ? url : `/mensen/${name}.png`}
             />
           </div>
 
